@@ -19,7 +19,9 @@
     "build-next": "yarn install --dev && next build src",
     "build-docker": "docker build -t clintonwoo/hackernews-react-graphql . && docker run -p 80:3000 --name hackernews-react-graphql clintonwoo/hackernews-react-graphql",
     "build-static-website": "NODE_ENV=production rm -rf build/static && yarn install --dev && next build src && next export src -o build/static",
-    "start": "NODE_ENV=production node build/app/server.js"
+    "start": "NODE_ENV=production node build/app/server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "keywords": [
     "hacker-news",
@@ -54,7 +56,8 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-render-html": "^0.5.1",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -80,5 +83,6 @@
     "react-test-renderer": "^15.6.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
-  }
+  },
+  "snyk": true
 }
