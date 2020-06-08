@@ -30,7 +30,7 @@
   "author": "Clinton D'Annolfo",
   "license": "Apache-2.0",
   "dependencies": {
-    "apollo-server-express": "^1.1.2",
+    "apollo-server-express": "^2.1.0",
     "babel-runtime": "^6.26.0",
     "body-parser": "^1.17.2",
     "cookie": "^0.3.1",
